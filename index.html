@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Don't Be Angry 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating hearts container -->
+    <div class="heart-container" id="heartContainer"></div>
+
+    <!-- Falling petals -->
+    <div class="petals-container" id="petalsContainer"></div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="message-box">
+            <div class="message">
+                <div class="beating-heart">💖</div>
+            </div>
+            
+            <div class="message">
+                <h1 class="title-text">Please don't be angry, my love 💖</h1>
+            </div>
+            
+            <div class="message">
+                <p class="main-text">You mean the world to me 🌍</p>
+            </div>
+            
+            <div class="message">
+                <p class="sub-text">I'm sorry if I hurt you 😔<br>
+                Your happiness means everything to me</p>
+            </div>
+            
+            <div class="message">
+                <p class="main-text">Let's smile again together 💕</p>
+            </div>
+
+            <!-- Random love quote -->
+            <div class="message love-quote-container">
+                <p class="love-quote" id="loveQuote">
+                    "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
+                </p>
+                <button class="quote-btn" onclick="changeQuote()">New Quote 💝</button>
+            </div>
+
+            <!-- Forgive me button -->
+            <div class="message">
+                <button class="forgive-btn" id="forgiveBtn">
+                    <span class="btn-text">Click if you forgive me 🥺</span>
+                    <span class="btn-hearts">💕</span>
+                </button>
+            </div>
+
+            <!-- Love letter (initially hidden) -->
+            <div class="love-letter-container" id="loveLetter">
+                <div class="letter-content">
+                    <h2>My Dearest Love 💌</h2>
+                    <p>Every moment without your smile feels incomplete. You are my sunshine on cloudy days, my comfort in difficult times, and my greatest joy in life.</p>
+                    <p>I know I made a mistake, and I'm truly sorry. Your forgiveness would mean the world to me. I promise to cherish every moment with you and never take your beautiful heart for granted.</p>
+                    <p>Forever yours,<br>With all my love 💖</p>
+                    <button class="close-letter" onclick="closeLetter()">Close ✕</button>
+                </div>
+            </div>
+
+            <!-- Open letter button -->
+            <div class="message">
+                <button class="letter-btn" onclick="openLetter()">
+                    📜 Read My Heart
+                </button>
+            </div>
+
+            <!-- Photo carousel -->
+            <div class="photo-carousel">
+                <div class="photo-frame" data-message="My reason to smile 💖">
+                    <img src="img1.jpg" alt="Memory 1">
+                    <div class="photo-label">My reason to smile 💖</div>
+                </div>
+                <div class="photo-frame" data-message="Forever and always 💕">
+                    <img src="img2.jpg" alt="Memory 2">
+                    <div class="photo-label">Forever and always 💕</div>
+                </div>
+                <div class="photo-frame" data-message="You & Me ✨">
+                    <img src="img3.jpg" alt="Memory 3">
+                    <div class="photo-label">You & Me ✨</div>
+                </div>
+                <div class="photo-frame" data-message="Beautiful moments 🌸">
+                    <img src="img4.jpg" alt="Memory 4">
+                    <div class="photo-label">Beautiful moments 🌸</div>
+                </div>
+                <div class="photo-frame" data-message="Our love story 💑">
+                    <img src="img5.jpg" alt="Memory 5">
+                    <div class="photo-label">Our love story 💑</div>
+                </div>
+            </div>
+
+            <!-- Countdown timer -->
+            <div class="message countdown-container">
+                <p class="countdown-text">Time since I've been waiting for your smile:</p>
+                <div class="countdown" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music indicator -->
+    <div class="music-indicator" id="musicIndicator">
+        <span class="music-icon">🎵</span> Playing soft music...
+        <button class="music-toggle" id="musicToggle" onclick="toggleMusic()">🔊</button>
+    </div>
+
+    <!-- Confetti container (for celebration) -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Background music -->
+    <audio id="bgMusic" loop>
+        <source src="perfect.mp3" type="audio/mpeg">
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
